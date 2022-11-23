@@ -1,0 +1,78 @@
+a.each do |num|
+  if num.even?
+    count += 1
+  end
+end
+
+if count == n
+  a = a.map{ |i| i / 2 }
+end
+
+count = 0
+
+p a
+
+
+
+
+
+
+
+while a <= A
+  a += 1
+  while b <= B
+    b += 1
+    while c <= C
+      c += 1
+      total = (500 * a) + (100 * b) + (50 * c)
+      if total == X
+        count += 1
+      end
+    end
+  end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A = gets.chomp.to_i
+B = gets.chomp.to_i
+C = gets.chomp.to_i
+X = gets.chomp.to_i
+
+count = 0
+a_array = []
+b_array = []
+c_array = []
+
+for i in 0..A do
+  a_array.push(500 * i)
+end
+
+for i in 0..B do
+  b_array.push(100 * i)
+end
+
+for i in 0..C do
+  c_array.push(50 * i)
+end
+
+all_array = a_array.product(b_array, c_array)
+
+all_array.each do |array|
+  if array.inject(:+) == X
+    count += 1
+  end
+end
+
+p count
