@@ -7,4 +7,4 @@ c = num[1].to_i
 
 s = gets
 
-print("#{a+b+c} #{s}\n")
+print("#{a+b+c} #{s}")

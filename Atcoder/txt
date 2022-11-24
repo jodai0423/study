@@ -76,3 +76,21 @@ all_array.each do |array|
 end
 
 p count
+
+
+
+
+
+while a <= N
+  a += 1
+  while a + b <= N
+    b += 1
+    while a + b + c <= N
+      c += 1
+      total = (10000 * a) + (5000 * b) + (1000 * c)
+      if total == X
+        count += 1
+      end
+    end
+  end
+end
