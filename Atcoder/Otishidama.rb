@@ -30,4 +30,6 @@ while a <= N
   b = 0
 end
 
+p res
+
 puts "#{res10000.to_s} #{res5000.to_s} #{res1000.to_s}"

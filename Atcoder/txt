@@ -94,3 +94,6 @@ while a <= N
     end
   end
 end
+
+num.push(h, m)
+      res.push(num)
