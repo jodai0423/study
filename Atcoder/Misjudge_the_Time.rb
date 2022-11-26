@@ -68,7 +68,7 @@ res.each do |r|
 end
 
 if res_original.length == 0
-  puts ""
+  puts "0 0 "
 else
   puts res_original[0].map(&:to_s).join(" ")
 end
