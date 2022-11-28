@@ -13,11 +13,19 @@ end
 count = 0
 
 times.each do |time|
-  if time[0] = 1
-    user_follow.select{|u| u[0] == time[1] && u[1] == time[2]}.delete_at(2).push(1)
-  elsif time[0] = 2
-    user_follow.select{|u| u[0] == time[1] && u[1] == time[2]}.delete_at(2).push(0)
-  else time[0] = 3
+  if time[0] == 1
+    user_follow.each do |u_f|
+      if u_f[0] == time[1] && u_f[1] == time[2]
+        u_f[2] = 1
+      end
+    end
+  elsif time[0] == 2
+    user_follow.each do |u_f|
+      if u_f[0] == time[1] && u_f[1] == time[2]
+        u_f[2] = 0
+      end
+    end
+  elsif time[0] == 3
     user_follow.each do |u|
       if u[0] == time[1] && u[1] == time[2] && u[2] == 1
         count += 1
@@ -26,9 +34,9 @@ times.each do |time|
       end
     end
     if count == 2
-      puts "YES"
+      puts "Yes"
     else
-      puts "NO"
+      puts "No"
     end
     count = 0
   end
